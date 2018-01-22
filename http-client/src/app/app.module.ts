@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { YoutubeSearchComponent } from './youtube-search/youtube-search.component';
+import {SearchBoxComponent} from './youtube-search/search-box.component';
+import {YouTubeSearchInjectables} from './youtube-search/youtube-search.injectables';
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import { YoutubeSearchComponent } from './youtube-search/youtube-search.componen
     HttpClientModule
   ],
   providers: [
-    youTubeSearchInjectables
+    YouTubeSearchInjectables
   ],
   bootstrap: [AppComponent]
 })
