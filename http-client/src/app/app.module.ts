@@ -16,7 +16,8 @@ import {YouTubeSearchInjectables} from './youtube-search/youtube-search.injectab
     AppComponent,
     SimpleHttpComponent,
     SearchResultComponent,
-    YoutubeSearchComponent
+    YoutubeSearchComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,

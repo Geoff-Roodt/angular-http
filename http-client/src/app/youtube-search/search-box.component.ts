@@ -2,6 +2,14 @@ import {Component, OnInit, Output, EventEmitter, ElementRef} from '@angular/core
 import {YouTubeSearchService} from './youtube-search.service';
 import{SearchResult} from '../search-result/search-result.model';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/switch';
+
 @Component({
   selector: 'search-box',
   template: `
