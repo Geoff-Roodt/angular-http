@@ -15,5 +15,26 @@ export class SearchBoxComponent implements OnInit{
 
   constructor(private youtube: YouTubeSearchService, private el: ElementRef){ }
 
-  
+  ngOnInit(): void{
+    Observable.fromEvent(this.el.nativeElement, 'keyup')
+    .map((e:any) => e.target.value) // extract the value
+    .filter((text: string) => text.length > 1)
+    .debounceTime(250) // fires once every 250ms
+    .do(() => this.loading.emit(true)) // enable the loading
+    .map((query:string) => this.youtube.search(query))
+    .switch() // discard if new search comes in
+    .subscribe(
+      (results: SearchResult[]) => { // success
+        this.loading.emit(false);
+        this.results.emit(results);
+      },
+      (err:any) => { // is an error
+        console.log(err);
+        this.loading.emit(false);
+      },
+      () => { // completion
+        this.loading.emit(false);
+      }
+    );
+  }
 }
