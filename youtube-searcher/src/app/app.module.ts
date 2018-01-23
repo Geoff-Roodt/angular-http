@@ -5,16 +5,19 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
 import {SearchResultComponent} from './you-tube-search/search-result.component';
+import {SearchBoxComponent} from './you-tube-search/search-box.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     YouTubeSearchComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    SearchBoxComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
