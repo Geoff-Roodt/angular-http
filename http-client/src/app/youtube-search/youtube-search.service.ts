@@ -1,9 +1,9 @@
 import {Injectable, Inject} from '@angular/core';
 import {HttpClient, HttpRequest, HttpHeaders} from '@angular/common/http';
-import {SearchResult} from '../search-result/search-result.model';
+import {SearchResult} from './search-result.model';
 import { Observable } from 'rxjs/Observable';
 
-export const YOUTUBE_API_KEY = 'AIzaSyAaXpmZz7L541X2AYTP6jK24h5EcsH-nfk';
+export const YOUTUBE_API_KEY = 'AIzaSyDOfT_BO81aEZScosfTYMruJobmpjqNeEk';
 export const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
 
 @Injectable()
