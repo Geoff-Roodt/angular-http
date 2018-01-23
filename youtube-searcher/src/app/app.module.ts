@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
 import {SearchResultComponent} from './you-tube-search/search-result.component';
 import {SearchBoxComponent} from './you-tube-search/search-box.component';
-
+import {YouTubeSearchInjectables} from './you-tube-search/you-tube-search.injectables';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import {SearchBoxComponent} from './you-tube-search/search-box.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [YouTubeSearchInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
