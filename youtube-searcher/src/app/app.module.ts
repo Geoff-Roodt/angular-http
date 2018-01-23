@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YouTubeSearchComponent
   ],
   imports: [
     BrowserModule
