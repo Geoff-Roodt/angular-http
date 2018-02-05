@@ -1,3 +1,6 @@
+
+// Injectables allow us to specify specific files/classes to bundle as a single dependency to be used within other components
+
 import {YouTubeSearchService, YOUTUBE_API_KEY, YOUTUBE_API_URL } from './you-tube-search.service';
 
 export const YouTubeSearchInjectables: Array<any> = [
